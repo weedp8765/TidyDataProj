@@ -36,7 +36,8 @@ This step uses the dplyr select() funciton to return a data frame that includes 
 Note that that "mean" and "std" were interpreted literally, and therefore certain variables were deemed OUT OF SCOPE:
 * Variables reflecting a meanFreq() calculation, as this reflects a weighted average of frequency components 
 * angle() variables for which certain mean values were an input, as these reflect the angle() computation, and not the mean()
-Some details on these are available in the features_info.txt UCI documentation.
+
+Some details on these variables are available in the features_info.txt UCI documentation.
 
 ###Step 6: Clean up names to better reflect tidy format
 Simply put, this step replaces "." and ".." with "\_" characters, and expands the "f" and "t" prefix to a more descriptive "freq\_" and "time\_", to better reflect information detailed in the UCI documentation
