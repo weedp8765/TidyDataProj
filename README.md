@@ -12,11 +12,11 @@ The script will verify whether or not the data has been downloaded, and if not, 
 
 ###Step 2: Sourcing relevant raw data
 The following relevant raw data is sourced into independent data frames:
-*Subject Data (1 numeric column indicating the ID of the subject being monitored)
-*X Data (561 numeric value columns covering various metrics calculated from the raw UCI data)
-*Y Data (1 numeric column indicating a code for the type of activity being monitored, e.g. Walking, Standing, etc.)
-*Features (2 columns, with 2nd column indicating headers for X data)
-*Activities (2 columns, the 1st numeric ID code aligning with values in Y Data, the 2nd an activity description)
+* Subject Data (1 numeric column indicating the ID of the subject being monitored)
+* X Data (561 numeric value columns covering various metrics calculated from the raw UCI data)
+* Y Data (1 numeric column indicating a code for the type of activity being monitored, e.g. Walking, Standing, etc.)
+* Features (2 columns, with 2nd column indicating headers for X data)
+* Activities (2 columns, the 1st numeric ID code aligning with values in Y Data, the 2nd an activity description)
 
 Note that X, Y and Subject data were split (per UCI readme, at random) between "train" and "test" data sets, therefore there are 2 source files that must be loaded for each.
 
@@ -39,7 +39,7 @@ Note that that "mean" and "std" were interpreted literally, and therefore certai
 Some details on these are available in the features_info.txt UCI documentation.
 
 ###Step 6: Clean up names to better reflect tidy format
-Simply put, this step replaces "." and ".." with "_" characters, and expands the "f" and "t" prefix to a more descriptive "freq_" and "time_", to better reflect information detailed in the UCI documentation
+Simply put, this step replaces "." and ".." with "\_" characters, and expands the "f" and "t" prefix to a more descriptive "freq\_" and "time\_", to better reflect information detailed in the UCI documentation
 
 ###Step 7: Summarize by subject and activity
 Again, the dplyr package is employed to summarize the data in a tidy format, taking the mean across all variables, grouping by distinct combinations of subjectID and Activity. This tidy data frame contains 180 observations of 68 variables.
