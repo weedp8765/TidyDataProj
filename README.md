@@ -34,8 +34,8 @@ This step uses the join() functionality to add the descriptive activity names to
 This step uses the dplyr select() funciton to return a data frame that includes the subjectID, activity (the descriptive values joined in step 4), as well as any variable reflecting "mean" or "std" calculated data, per the assignment instructions.
 
 Note that that "mean" and "std" were interpreted literally, and therefore certain variables were deemed OUT OF SCOPE:
-*Variables reflecting a meanFreq() calculation, as this reflects a weighted average of frequency components 
-*angle() variables for which certain mean values were an input, as these reflect the angle() computation, and not the mean()
+* Variables reflecting a meanFreq() calculation, as this reflects a weighted average of frequency components 
+* angle() variables for which certain mean values were an input, as these reflect the angle() computation, and not the mean()
 Some details on these are available in the features_info.txt UCI documentation.
 
 ###Step 6: Clean up names to better reflect tidy format
